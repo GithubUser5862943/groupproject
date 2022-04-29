@@ -1,5 +1,7 @@
 package application.controller;
 
+import java.util.Calendar;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,7 +10,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 
 /*
-Names: Paul Carrizales, Angel Galicia
+Names: Paul Carrizales
 UTSA IDs: pja691
 Class Description: This controller class contains the action IDs and execution code for buttons
 of the Main/home view.
@@ -17,6 +19,12 @@ public class MainController {
 
     @FXML
     private Button nextMonth;
+    
+    @FXML
+    private Button resetButton;
+    
+    @FXML
+    private Button loader;
 
     @FXML
     private TextArea text26;
@@ -159,28 +167,92 @@ public class MainController {
     @FXML
     private TextArea text9;
 
+    private application.model.CalendarModel calendar = new application.model.CalendarModel();
+    
+    
     /* This method allows users to select a day to edit */
     @FXML
     void selectDay(MouseEvent event) {
-    	System.out.println("Day selected");
+    	
+    	int day;
+    	TextArea clicked = (TextArea) event.getSource();
+    	try {
+    		day = Integer.parseInt(clicked.getText());
+    		calendar.setDay(day);
+    		System.out.println("Day " + day + " selected");
+    	} catch (Exception e){
+    		System.out.println("Warning -- no integer found");
+    	}
+    	//setDaysText();
     }
     
-    /* This method switches the current month viewed to the previous month */
+    /* This method switches from the current month viewed to the previous month */
     @FXML
     void prevMonth(ActionEvent event) {
     	System.out.println("Previous Month");
+    	calendar.prevMonth();
+    	setMonthText();
+    	setDaysText();
+    	
     }
     
-    /* This method switches the current month viewed to the next month */
+    /* This method switches from the current month viewed to the next month */
     @FXML
     void nextMonth(ActionEvent event) {
     	System.out.println("Next Month");
+    	calendar.nextMonth();
+    	setMonthText();
+    	setDaysText();
     }
     
-    /* This method submits the changes to the currently selected month */
+    /* This method loads the calendar event data */
+    @FXML
+    void loadCalendarData(ActionEvent event) {
+    	System.out.println("Calendar data loaded");
+    	setMonthText();
+    	setDaysText();
+    }
+    
+    /* This method sets/resets the calendar view to current month */
+    @FXML
+    void resetView(ActionEvent event) {
+    	System.out.println("Calendar view set to current month");
+    	calendar.generateCalendarData();
+    	setMonthText();
+    	setDaysText();
+    }
+    
+    /* This method submits the changes to the currently selected day (day 1 by default) */
     @FXML
     void submitChanges(ActionEvent event) {
     	System.out.println("Changes submitted");
+    	setMonthText();
+    	setDaysText();
+    }
+    
+    /* Sets up the view label with the current month information */
+    void setMonthText() {
+    	monthLabel.setText(calendar.getMonth());
+    }
+    
+    /* Sets/resets the view label with the current days information */
+    void setDaysText() {
+    	TextArea t[] = {text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11,
+    			text12, text13, text14, text15, text16, text17, text18, text19, text20, text21, text22,
+    			text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, 
+    			text34, text35, text36, text37, text38, text39, text40, text41, text42};
+    	
+    	int day = 1;
+    	int calStart = calendar.getStartDay();
+    	int daysInMonth = calendar.maxDaysInMonth();
+    	for(int i = 0; i < t.length; i++) {
+    		if(i >= calStart && i < (daysInMonth + calStart)) {
+    			t[i].setText(""+ day);
+    			day++;
+    		} else {
+    			t[i].clear();
+    		}
+    	}
     }
 
 }

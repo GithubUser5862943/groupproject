@@ -10,7 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
 /*
-Names: Paul Carrizales, Angel Galicia
+Names: Paul Carrizales
 UTSA IDs: pja691, 
 Class Description: This class contains the startup code for the application
 */

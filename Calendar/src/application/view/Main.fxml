@@ -37,40 +37,40 @@
             <TextArea fx:id="text5" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <TextArea fx:id="text6" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
             <TextArea fx:id="text7" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <TextArea fx:id="text8" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <TextArea fx:id="text9" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextArea fx:id="text10" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextArea fx:id="text11" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <TextArea fx:id="text12" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <TextArea fx:id="text13" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <TextArea fx:id="text14" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <TextArea fx:id="text15" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
-            <TextArea fx:id="text16" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextArea fx:id="text17" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <TextArea fx:id="text18" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <TextArea fx:id="text19" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <TextArea fx:id="text20" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <TextArea fx:id="text21" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <TextArea fx:id="text22" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
-            <TextArea fx:id="text23" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextArea fx:id="text24" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <TextArea fx:id="text25" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <TextArea fx:id="text26" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <TextArea fx:id="text28" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <TextArea fx:id="text27" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <TextArea fx:id="text29" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
-            <TextArea fx:id="text30" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextArea fx:id="text31" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <TextArea fx:id="text32" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <TextArea fx:id="text33" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <TextArea fx:id="text34" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <TextArea fx:id="text35" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <TextArea fx:id="text36" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6" />
-            <TextArea fx:id="text37" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextArea fx:id="text38" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <TextArea fx:id="text39" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <TextArea fx:id="text40" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <TextArea fx:id="text41" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <TextArea fx:id="text8" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            <TextArea fx:id="text9" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="text10" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextArea fx:id="text11" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextArea fx:id="text12" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextArea fx:id="text13" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TextArea fx:id="text14" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <TextArea fx:id="text15" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <TextArea fx:id="text16" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="text17" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextArea fx:id="text18" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextArea fx:id="text19" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextArea fx:id="text20" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextArea fx:id="text21" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <TextArea fx:id="text22" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
+            <TextArea fx:id="text23" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="text24" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextArea fx:id="text25" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextArea fx:id="text26" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextArea fx:id="text28" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <TextArea fx:id="text27" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <TextArea fx:id="text29" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
+            <TextArea fx:id="text30" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextArea fx:id="text31" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextArea fx:id="text32" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextArea fx:id="text33" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextArea fx:id="text34" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <TextArea fx:id="text35" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <TextArea fx:id="text36" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6" />
+            <TextArea fx:id="text37" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextArea fx:id="text38" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextArea fx:id="text39" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextArea fx:id="text40" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextArea fx:id="text41" editable="false" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
             <TextArea fx:id="text42" onMouseClicked="#selectDay" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
             <Label text="Sunday" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
             <Label text="Monday" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
@@ -86,7 +86,7 @@
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="prevMonth" mnemonicParsing="false" onAction="#prevMonth" text="&lt;" />
-            <Label fx:id="monthLabel" text="Month">
+            <Label fx:id="monthLabel" text="Click Set To Start">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" />
                </HBox.margin>
@@ -102,12 +102,25 @@
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="addEventLabel" text="Add Event" />
-            <TextArea fx:id="eventTextArea" prefHeight="200.0" prefWidth="200.0">
+            <TextArea fx:id="eventTextArea" prefHeight="200.0" prefWidth="200.0" promptText="Enter event data here...">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </TextArea>
-            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitChanges" text="Submit" />
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitChanges" text="Submit">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Button>
+            <Button fx:id="loader" alignment="CENTER" maxHeight="60.0" mnemonicParsing="false" onAction="#loadCalendarData" prefHeight="52.0" text="Load Calendar" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="120.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetView" text="Set / Reset" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </right>
