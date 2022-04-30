@@ -1,6 +1,6 @@
 package application.controller;
 
-import java.util.Calendar;
+import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,6 +22,9 @@ public class MainController {
     
     @FXML
     private Button resetButton;
+    
+    @FXML
+    private Button saver;
     
     @FXML
     private Button loader;
@@ -176,8 +179,10 @@ public class MainController {
     	
     	int day;
     	TextArea clicked = (TextArea) event.getSource();
+    	Scanner intFinder = new Scanner(clicked.getText());
     	try {
-    		day = Integer.parseInt(clicked.getText());
+    		//day = Integer.parseInt(clicked.getText());
+    		day= intFinder.nextInt();
     		calendar.setDay(day);
     		System.out.println("Day " + day + " selected");
     	} catch (Exception e){
@@ -191,8 +196,7 @@ public class MainController {
     void prevMonth(ActionEvent event) {
     	System.out.println("Previous Month");
     	calendar.prevMonth();
-    	setMonthText();
-    	setDaysText();
+    	setView();
     	
     }
     
@@ -201,16 +205,23 @@ public class MainController {
     void nextMonth(ActionEvent event) {
     	System.out.println("Next Month");
     	calendar.nextMonth();
-    	setMonthText();
-    	setDaysText();
+    	setView();
+    }
+    
+    /* This method loads the calendar event data */
+    @FXML
+    void saveCalendarData(ActionEvent event) {
+    	calendar.saveDataToFile();
+    	System.out.println("Calendar data saved");
+    	setView();
     }
     
     /* This method loads the calendar event data */
     @FXML
     void loadCalendarData(ActionEvent event) {
     	System.out.println("Calendar data loaded");
-    	setMonthText();
-    	setDaysText();
+    	calendar.loadDataToMap();
+    	setView();
     }
     
     /* This method sets/resets the calendar view to current month */
@@ -225,9 +236,9 @@ public class MainController {
     /* This method submits the changes to the currently selected day (day 1 by default) */
     @FXML
     void submitChanges(ActionEvent event) {
+    	calendar.saveDataToMap(eventTextArea.getText());
     	System.out.println("Changes submitted");
-    	setMonthText();
-    	setDaysText();
+    	setView();
     }
     
     /* Sets up the view label with the current month information */
@@ -241,13 +252,17 @@ public class MainController {
     			text12, text13, text14, text15, text16, text17, text18, text19, text20, text21, text22,
     			text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, 
     			text34, text35, text36, text37, text38, text39, text40, text41, text42};
-    	
+    	String[] notes = calendar.getNotes();
     	int day = 1;
     	int calStart = calendar.getStartDay();
     	int daysInMonth = calendar.maxDaysInMonth();
     	for(int i = 0; i < t.length; i++) {
     		if(i >= calStart && i < (daysInMonth + calStart)) {
     			t[i].setText(""+ day);
+    			if(notes[day-1] != null) {
+    				t[i].appendText("\n");
+    				t[i].appendText(notes[day-1]);
+    			}
     			day++;
     		} else {
     			t[i].clear();
@@ -255,4 +270,10 @@ public class MainController {
     	}
     }
 
+    /* General method for setting view data */
+    void setView() {
+    	setMonthText();
+    	calendar.loadDataToMonthNotes();
+    	setDaysText();
+    }
 }
