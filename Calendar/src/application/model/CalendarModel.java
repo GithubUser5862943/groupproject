@@ -1,6 +1,11 @@
  package application.model;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.io.*;
 
 /*
 Name: Paul Carrizales
@@ -11,6 +16,8 @@ of the "Calendar" group project application.
 public class CalendarModel {
 
 	Calendar calen = Calendar.getInstance();
+	HashMap<Integer, String> events = new HashMap<>();
+	String notes[] = new String[31];
 	
 	String month;
 	int currMonth;
@@ -30,14 +37,90 @@ public class CalendarModel {
 		
 	}
 	
-	/* method to load saved calendar data to calendar view */
-	public void loadData() {
+	/* method to load saved calendar data to Map */
+	public void loadDataToMap() {
+		String c = "data/Calendar.sav";
+		File calendarYear = new File(c);
+		String buff;
+		int key = 1;
+		String value;
+		if(calendarYear.exists()) {
+			System.out.println("I AM HERE");
+			try {
+				Scanner loader = new Scanner(calendarYear);
+				while(loader.hasNextLine()) {
+					buff = loader.nextLine();
+					if(buff.length() > 6) {
+						//System.out.println(buff);
+						key = Integer.parseInt(buff);
+						value = loader.nextLine();
+						events.put(key, value);
+				}
+			}
+			loader.close();
+			} catch (FileNotFoundException e) {
+				System.out.println("File \"" + c +"\" was not found");
+			}
+		} else {
+			System.out.println("ERROR: There is no save data to load. BIRTH ME!!!");
+		}
 		
 	}
 	
-	/* method to save calendar data to file from calendar view */
+	/* method to load saved calendar data from Map to notes for injection into view */
+	public void loadDataToMonthNotes() {
+		Iterator<Entry<Integer, String>> iterator = events.entrySet().iterator();
+		int key;
+		int monthValue;
+		int yearValue;
+		int dayValue;
+		for(int i = 0; i < notes.length; i++) {
+			notes[i]= null;
+		}
+		while(iterator.hasNext()) {
+			Entry<Integer, String> entry = iterator.next();
+			key = entry.getKey();
+			monthValue = key / 1000000;
+			yearValue = key % 10000;
+			dayValue = key / 10000;
+			dayValue = dayValue % 100;
+			if(monthValue == currMonth && yearValue == year) {
+				notes[dayValue-1] = entry.getValue();
+			}
+		}
+		
+	}
+	
+	/* method to save calendar data to HashMap */
+	public void saveDataToMap(String note) {
+		int key = (day * 10000) + (currMonth * 1000000) + year;
+		if(note.length() > 0) {
+			events.put(key, note);
+		}
+	}
+	
+	/* method to save calendar data to file from HashMap */
 	public void saveDataToFile() {
-		System.out.println();
+		String c = "data/Calendar.sav";
+		File calendarYear = new File(c);
+		if(calendarYear.exists()) {
+			calendarYear.delete();
+		}
+		try {
+		calendarYear.createNewFile();
+		PrintStream output = new PrintStream(calendarYear);
+		Iterator<Entry<Integer, String>> iterator = events.entrySet().iterator();
+		while(iterator.hasNext()) {
+			Entry<Integer, String> entry = iterator.next();
+			output.println(entry.getKey());
+			output.println(entry.getValue());
+		}
+		output.close();
+		}catch (FileNotFoundException e) {
+			System.out.println("ERROR: File not found");
+		}catch (IOException e) {
+			System.out.println("There was an error creating the file");
+		}
 	}
 	
 	/* method to set current month text to month string variable */
@@ -145,5 +228,10 @@ public class CalendarModel {
 	/* decrements current year */
 	public void prevYear() {
 		year--;
+	}
+	
+	
+	public String[] getNotes() {
+		return this.notes;
 	}
 }
